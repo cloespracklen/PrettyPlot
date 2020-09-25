@@ -106,11 +106,13 @@ var drawLabels = function(graphDim,margins)
 		.attr("x", margins.left + graphDim.width/2)
 		.attr("y", margins.top + (graphDim.height)+(40))
 	
-	labels.append("text")
+	labels.append("g")
+    .append("text")
 		.classed("label", true)
 		.text("Percentage Voting For Trump")
         .attr("text-anchor","middle")
-		.attr("transform", "rotate(90) translate (0," + (graphDim.height/2)+")")
+		.attr("transform", "rotate(90)")
+    .attr("transform","translate(0,"+(margins.bottom+(graph.height/2))+")")
 }
 
 
