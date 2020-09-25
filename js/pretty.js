@@ -1,7 +1,3 @@
-
-
-
-
 //counties is the array of data
 //target is the selection of the g element to place the graph in
 //xscale,yscale are the x and y scales.
@@ -106,13 +102,11 @@ var drawLabels = function(graphDim,margins)
 		.attr("x", margins.left + graphDim.width/2)
 		.attr("y", margins.top + (graphDim.height)+(40))
 	
-	labels.append("g")
-    .append("text")
+	labels.append("text")
 		.classed("label", true)
 		.text("Percentage Voting For Trump")
         .attr("text-anchor","middle")
-		.attr("transform", "rotate(90)")
-    .attr("transform","translate(0,"+(margins.bottom+(graph.height/2))+")")
+		.attr("transform", "rotate(90) translate (" + (graphDim.height/2)+",-10)")
 }
 
 
